@@ -2,14 +2,8 @@
 !#
 (define (range n0 n1)
   (if (< n0 n1)
-    (begin
-      (display (string-append (number->string n0) "<" (number->string n1) "\n"))
-      (cons n0 (range (+ n0 1) n1))
-    )
-    (begin
-      (display (string-append (number->string n0) ">=" (number->string n1) "\n"))
-      (cons n0 '())
-    )
+    (cons n0 (range (+ n0 1) n1))
+    (cons n0 '())
   )
 )
 
